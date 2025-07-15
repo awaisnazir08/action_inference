@@ -4,7 +4,6 @@
 /main.py
 /model
 /OpenTAD
-/requirements.txt
 /video_features/models/__pycache__
 /video_features/models/i3d/checkpoints
 /video_features/models/r21d/checkpoints
