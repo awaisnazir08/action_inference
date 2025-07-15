@@ -1,0 +1,39 @@
+# Configuration for OpenTAD test.py
+action_former_args:
+  # Path to the config file (required by test.py)
+  actionformer_config_file_path: "OpenTAD/configs/actionformer/thumos_i3d.py"  # Example path, update as needed
+
+  # Path to the finetuned checkpoint file
+  model_checkpoint_path: "./model/best.pth"
+
+  # Random seed (default: 42)
+  seed: 42
+
+  # Additional config options to override (optional, as a dictionary)
+  cfg_options: {}
+
+  videos_metadata_directory: "videos_metadata"
+  videos_features_directory: 'videos_extracted_features'
+  class_map: "./data_files/category_idx.txt"
+  block_list: "./data_files/missing_files.txt"
+
+  video_features_extraction:
+    feature_type: "i3d"
+    stack_size: 16
+    step_size: 4
+    streams: null
+    extraction_fps: null
+    flow_type: "raft"
+    on_extraction: "print"
+
+  post_processing:
+    sliding_window: false
+    nms:
+      use_soft_nms: false
+      sigma: 0.5
+      max_seg_num: 1000
+      iou_threshold: 0.1
+      min_score: 0.3
+      multiclass: true
+      voting_thresh: 0.7
+    save_dict: false
