@@ -1,4 +1,3 @@
-/action_processor.py
 /code files
 /data_files
 /main.py
@@ -14,7 +13,6 @@
 video_features/utils/__pycache__
 /videos_extracted_features
 /videos_metadata
-
 /__pycache__
 __pycache__/
 *.pt
